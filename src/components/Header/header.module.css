@@ -10,6 +10,7 @@
 
 .img{
     transition: all 0.3s ease;
+    background: transparent;
 }
 
 .img:hover{
@@ -34,12 +35,16 @@
     color: var(--aqua);
 }
 
+.containerLinks{
+    background: transparent;
+}
+
 .links{
     text-decoration: none;
     color: var(--white);
     border: 1px solid var(--aqua);
     transition: all 0.3s ease;
-
+    background: transparent;
     border-radius: 5px;
     padding: 5px;
     margin: 5px;
