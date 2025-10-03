@@ -6,12 +6,12 @@
     
     color: var(--white);
 
-    padding: 50px 15px;
     width: 15vw;
+    padding: 50px 15px;
 
-    border: 1px solid var(--white);      
+    border: 3px solid var(--white);      
     border-top-left-radius: 120px;
-    border-bottom-right-radius: 60px;
+    border-bottom-right-radius: 120px;
     z-index: 1;
     box-shadow: -4px -4px 0 var(--aqua);
 }

@@ -7,7 +7,7 @@ import { GoDownload } from "react-icons/go";
 export const Card = ({ career, curfew, location }) => {
     return (
         <div className={styles.container}>
-            <img src="/img/Me.jpg" className={styles.img} alt="" />
+            <img src="/img/Me.png" className={styles.img} alt="" />
             <div className={styles.containerText}>
                 <h3 className={styles.h3}>Evandro Kaibara</h3>
                 <p className={styles.p}>{career}</p>

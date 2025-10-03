@@ -1,0 +1,75 @@
+.containerText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5vw;
+}
+
+.h1{
+    position: relative;
+    font-size: 72px;
+    font-weight: 400;
+    color: var(--white);
+    line-height: 72px;
+}
+
+.h1::before{
+    content: "<h1>";
+    color: var(--light-aqua); 
+    font-size: 1rem;
+    position: absolute;
+    top: -40px;
+}
+
+.h1::after {
+    content: "</h1>";
+    color: var(--light-aqua);
+    font-size: 1rem;
+    position: absolute;
+    bottom: -20px;
+}
+
+.containerP{
+    display: flex;
+    flex-direction: column;
+    padding-top: 5vh;
+    position: relative;
+}
+
+.p{
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--white);
+    padding-left: 2vw;
+    padding-bottom: 1vh;
+}
+
+.containerP::before{
+    content: "<p>";
+    color: var(--light-aqua); 
+    font-size: 1rem;
+    position: absolute;
+    top: 30px;
+}
+
+.containerP::after {
+    content: "</p>";
+    color: var(--light-aqua);
+    font-size: 1rem;
+    position: absolute;
+    bottom: -10px;
+}
+
+.containerContact{
+    display: flex;
+    align-items: center;
+
+    color: var(--aqua);
+    font-size: 28px;
+    padding-top: 5vh;
+}
+
+.a{
+    margin: 0 10px;
+    line-height: 60%;
+}
