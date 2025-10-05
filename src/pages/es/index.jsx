@@ -1,5 +1,7 @@
+import { About } from "../../components/About"
 import { Card } from "../../components/Card"
 import { Header } from "../../components/Header"
+import { Language } from "../../components/Language"
 import { Text } from "../../components/Text"
 import styles from '../pages.module.css'
 
@@ -34,10 +36,37 @@ export const ES = () => {
                     </div>
                 </div>
 
-                <section id="about" className={styles.about}>
+                <section id="about" className={styles.containerAbout}>
+                    <div className={styles.containerAboutDescription}>
+                        <div className={styles.containerAboutText}>
+                            <About
+                                h2={<>Acerca <span>de mí</span></>}
+                                p={"Desde los 14 años, tengo un gran interés por la programación y la creación de sitios web, áreas que despiertan mi curiosidad y me impulsan a seguir aprendiendo cada vez más. Además, me gusta escuchar música, algo que me inspira y me acompaña mientras exploro nuevas tecnologías y mejoro mis habilidades en el mundo del desarrollo."}
+                            />
+                        </div>
+                        <div className={styles.containerAboutLanguages}>
+                            <Language
+                                h3="Idiomas"
 
+                                portuguese="Portugués"
+                                portugueseStatus="C2"
+                                portuguesLevel="Competente (Nativo)"
+                                portuguesePercent={100}
+
+                                english="Inglés"
+                                englishStatus="C2"
+                                englishLevel="Competente"
+                                englishPercent={100}
+
+                                spanish="Español"
+                                spanishStatus="C1"
+                                spanishLevel="Avanzado"
+                                spanishPercent={80}
+                            />
+                        </div>
+                    </div>
                 </section>
-        </main>
+            </main>
         </>
     )
 }

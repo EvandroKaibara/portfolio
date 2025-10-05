@@ -1,5 +1,7 @@
+import { About } from "../../components/About"
 import { Card } from "../../components/Card"
 import { Header } from "../../components/Header"
+import { Language } from "../../components/Language"
 import { Text } from "../../components/Text"
 import styles from '../pages.module.css'
 
@@ -34,8 +36,35 @@ export const PT = () => {
                     </div>
                 </div>
 
-                <section id="about" className={styles.about}>
-                    
+                <section id="about" className={styles.containerAbout}>
+                    <div className={styles.containerAboutDescription}>
+                        <div className={styles.containerAboutText}>
+                            <About
+                                h2={<>Sobre <span>mim</span></>}
+                                p={"Desde os 14 anos, desenvolvo um grande interesse por programação e pela construção de sites, áreas que despertam minha curiosidade e motivação para aprender cada vez mais. Além disso, gosto de escutar música, algo que me inspira e me acompanha enquanto exploro novas tecnologias e aprimoro minhas habilidades no mundo do desenvolvimento."}
+                            />
+                        </div>
+                        <div className={styles.containerAboutLanguages}>
+                            <Language
+                                h3="Idiomas"
+
+                                portuguese="Português"
+                                portugueseStatus="C2"
+                                portuguesLevel="Proficiente (Nativo)"
+                                portuguesePercent={100}
+
+                                english="Inglês"
+                                englishStatus="C2"
+                                englishLevel="Proficiente"
+                                englishPercent={100}
+
+                                spanish="Espanhol"
+                                spanishStatus="C1"
+                                spanishLevel="Avançado"
+                                spanishPercent={80}
+                            />
+                        </div>
+                    </div>
                 </section>
             </main>
         </>

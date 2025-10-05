@@ -7,10 +7,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 64px 160px;
+    padding: 2vh 10vw;
     position: relative;
-    height: 75vh;
-    z-index: 1;
+    height: 85vh;
+    z-index: 1;    
+    background-color: var(--grey);
 }
 
 .scrollCenter {
@@ -47,11 +48,21 @@
     animation: moveMouse 2s infinite ease-in-out;
 }
 
-.about{
+.containerAbout{
     background-image: url('/img/BackgroundImg.png');
     height: 100vh;
     position: relative;
     z-index: 1;
+    padding: 15vh 10vw;
+}
+
+.containerAboutDescription{
+    background: transparent;
+    width: 30%;
+}
+
+.containerAboutText {
+    margin-bottom: 5vh;
 }
 
 @keyframes moveMouse {

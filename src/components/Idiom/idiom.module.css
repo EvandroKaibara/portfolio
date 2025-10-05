@@ -1,0 +1,30 @@
+.idiomItem{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 2vh 1vw;
+    font-size: 18px;
+}
+
+.idiomName{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.idiomBarBg{
+    background-color: var(--white);
+    overflow: hidden;
+    width: 100%;
+    height: 5px;
+    margin: 10px 0;
+}
+
+.idiomBarFill{
+    background-color: var(--aqua);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
