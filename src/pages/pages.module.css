@@ -28,7 +28,7 @@
 
 .scrollLine {
     position: relative;
-    height: 250px;
+    height: 20vh;
     width: 2px;
     background: repeating-linear-gradient(
         to bottom,
@@ -65,6 +65,11 @@
 
 .containerAboutText {
     margin-bottom: 5vh;
+}
+
+.containerProjects{
+    background: url('/img/ProjectsBg.png');
+    height: 100vh;
 }
 
 @keyframes moveMouse {

@@ -7,7 +7,7 @@
 
 .h1{
     position: relative;
-    font-size: 72px;
+    font-size: 4.5rem;
     font-weight: 400;
     color: var(--white);
     line-height: 72px;
@@ -37,7 +37,7 @@
 }
 
 .p{
-    font-size: 18px;
+    font-size: 1.2rem;
     font-weight: 400;
     color: var(--white);
     padding-left: 2vw;
@@ -65,7 +65,7 @@
     align-items: center;
 
     color: var(--aqua);
-    font-size: 28px;
+    font-size: 1.75rem;
     padding-top: 5vh;
 }
 

@@ -32,11 +32,11 @@
 }
 
 .h3{
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 .p{
-    font-size: 14px;
+    font-size: 0.8rem;
 }
 
 .containerItems{
@@ -65,13 +65,13 @@
     border-radius: 20px;
     padding: 2px 5px;
     margin: 5px;
-    font-size: 14px;
+    font-size: 0.8rem;
 }
 
 .button{
     border: none;
     background-color: var(--white);
-    font-size: 20px;
+    font-size: 1.25rem;
     margin-top: 25px;
     padding: 5px 25px;
     border-radius: 25px;

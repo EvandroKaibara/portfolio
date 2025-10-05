@@ -3,6 +3,7 @@ import { Card } from "../../components/Card"
 import { Footer } from "../../components/Footer"
 import { Header } from "../../components/Header"
 import { Language } from "../../components/Language"
+import { ProjectTitle } from "../../components/ProjectTitle"
 import { Text } from "../../components/Text"
 import styles from '../pages.module.css'
 
@@ -67,9 +68,16 @@ export const ENG = () => {
                         </div>
                     </div>
                 </section>
+
+                <section id="project" className={styles.containerProjects}>
+                    <ProjectTitle 
+                        h2="Projects"
+                        p="Hover to see more information"
+                    />
+                </section>
             </main>
 
-            <Footer p="© 2025 EvandroKaibara. All rights reserved."/>
+            <Footer p="© 2025 EvandroKaibara. All rights reserved." />
         </>
     )
 }

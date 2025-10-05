@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.h2{
+    font-size: 3.0rem;
+    color: var(--white);
+    font-weight: 400;
+
+    background-color: var(--grey);
+    padding: 3vh 2vw;
+    margin-top: 15vh;
+    margin-bottom: 3vh;
+
+    border: 3px solid var(--aqua);
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.p{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: var(--aqua);
+    font-weight: 600;
+}
