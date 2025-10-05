@@ -2,7 +2,7 @@ import styles from './card.module.css'
 import { RiMailOpenLine } from "react-icons/ri";
 import { RiMapPinLine } from "react-icons/ri";
 import { RiBriefcase3Line } from "react-icons/ri";
-import { GoDownload } from "react-icons/go";
+import { TiExport } from "react-icons/ti";
 
 export const Card = ({ career, curfew, location }) => {
     return (
@@ -33,7 +33,7 @@ export const Card = ({ career, curfew, location }) => {
                 <span className={styles.span}>POSTGRE</span>
             </div>
             <button className={styles.button}>
-                {curfew} <GoDownload />
+                {curfew} <TiExport />
             </button>
         </div>
     )

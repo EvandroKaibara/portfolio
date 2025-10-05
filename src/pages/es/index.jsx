@@ -29,6 +29,7 @@ export const ES = () => {
                             paragraph2={<>Trabajo profesionalmente en <strong>Magellan Group</strong>, contribuyendo en proyectos que implican soluciones innovadoras y escalables para diferentes áreas del mercado.</>}
                             paragraph3={<>Tengo experiencia en desarrollo <strong>full stack</strong>, buenas prácticas de arquitectura de software e integración de herramientas modernas, siempre con un enfoque en rendimiento, usabilidad y calidad del código.</>}
                             h2="¡Ponte en Contacto!"
+                            lang='es'
                         />
                     </div>
                 </section>

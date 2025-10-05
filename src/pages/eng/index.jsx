@@ -27,7 +27,8 @@ export const ENG = () => {
                             paragraph1={<>I am a <strong>Software Engineer</strong>, currently a student at <strong>FIAP</strong>, where I deepen my knowledge in systems development and emerging technologies.</>}
                             paragraph2={<>I work professionally at <strong>Magellan Group</strong>, contributing to projects that involve innovative and scalable solutions for different areas of the market.</>}
                             paragraph3={<>I have experience in <strong>full stack development</strong>, software architecture best practices, and the integration of modern tools, always focusing on performance, usability, and code quality.</>}
-                            h2="Get in Touch!"
+                            h2="Get in Touch!" 
+                            lang='eng'
                         />
                     </div>
                 </section>
