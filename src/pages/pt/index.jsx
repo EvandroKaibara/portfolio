@@ -1,5 +1,6 @@
 import { About } from "../../components/About"
 import { Card } from "../../components/Card"
+import { Footer } from "../../components/Footer"
 import { Header } from "../../components/Header"
 import { Language } from "../../components/Language"
 import { Text } from "../../components/Text"
@@ -67,6 +68,8 @@ export const PT = () => {
                     </div>
                 </section>
             </main>
+            
+            <Footer p="© 2025 EvandroKaibara. Todos os direitos reservados."/>
         </>
     )
 }

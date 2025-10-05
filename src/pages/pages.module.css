@@ -9,7 +9,7 @@
     align-items: center;
     padding: 2vh 10vw;
     position: relative;
-    height: 85vh;
+    height: 100vh;
     z-index: 1;    
     background-color: var(--grey);
 }
@@ -28,13 +28,15 @@
 
 .scrollLine {
     position: relative;
-    height: 200px;
+    height: 250px;
     width: 2px;
-    background: repeating-linear-gradient(to bottom,
+    background: repeating-linear-gradient(
+        to bottom,
         var(--white),
         var(--white),
         transparent 10px,
-        transparent 20px);
+        transparent 20px
+    );
     margin: 0 auto;
     display: flex;
     justify-content: center;

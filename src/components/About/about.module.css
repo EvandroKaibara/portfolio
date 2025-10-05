@@ -5,11 +5,9 @@
     text-align: left;
 
     width: 100%;
-    background: transparent;
-
     & h2{
         color: var(--white);
-        font-size: 64px;
+        font-size: 58px;
         padding-bottom: 2vh;
 
         & span{

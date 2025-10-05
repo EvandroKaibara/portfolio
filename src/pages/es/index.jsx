@@ -1,5 +1,6 @@
 import { About } from "../../components/About"
 import { Card } from "../../components/Card"
+import { Footer } from "../../components/Footer"
 import { Header } from "../../components/Header"
 import { Language } from "../../components/Language"
 import { Text } from "../../components/Text"
@@ -12,6 +13,7 @@ export const ES = () => {
                 about="Sobre"
                 projects="Proyectos"
             />
+
             <main className={styles.main}>
                 <section id="home" className={styles.home}>
                     <Card
@@ -67,6 +69,8 @@ export const ES = () => {
                     </div>
                 </section>
             </main>
+
+            <Footer p="© 2025 EvandroKaibara. Todos los derechos reservados."/>
         </>
     )
 }

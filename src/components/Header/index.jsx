@@ -6,9 +6,9 @@ export const Header = ({ about, projects }) => {
         <header className={styles.header}>
             <img src="/img/Logo.svg" alt="logo" className={styles.img}/>
             <ul className={styles.ul}>
-                <li><a href='#' className={styles.a}>Home</a></li>
-                <li><a href='#' className={styles.a}>{about}</a></li>
-                <li><a href="#" className={styles.a}>{projects}</a></li>
+                <li><a href='#home' className={styles.a}>Home</a></li>
+                <li><a href='#about' className={styles.a}>{about}</a></li>
+                <li><a href="#project" className={styles.a}>{projects}</a></li>
             </ul>
             <div className={styles.containerLinks}>
                 <Link to="/" className={styles.links}>pt</Link>
