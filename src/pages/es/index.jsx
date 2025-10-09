@@ -1,5 +1,6 @@
 import { About } from "../../components/About"
 import { Card } from "../../components/Card"
+import { Carousel } from "../../components/Carousel"
 import { Footer } from "../../components/Footer"
 import { Header } from "../../components/Header"
 import { Language } from "../../components/Language"
@@ -69,11 +70,14 @@ export const ES = () => {
                             />
                         </div>
                     </div>
+                    <Carousel
+                        h3="Tecnologías"
+                    />
                 </section>
             </main>
 
             <section id="project" className={styles.containerProjects}>
-                <ProjectTitle 
+                <ProjectTitle
                     h2="Proyectos"
                     p="Pasa el cursor para ver más información"
                 />

@@ -55,7 +55,7 @@
     height: 100vh;
     position: relative;
     z-index: 1;
-    padding: 15vh 10vw;
+    padding: 7vh 10vw 20vh 10vw;
 }
 
 .containerAboutDescription{

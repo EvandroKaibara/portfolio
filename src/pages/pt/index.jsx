@@ -1,5 +1,6 @@
 import { About } from "../../components/About"
 import { Card } from "../../components/Card"
+import { Carousel } from "../../components/Carousel"
 import { Footer } from "../../components/Footer"
 import { Header } from "../../components/Header"
 import { Language } from "../../components/Language"
@@ -68,6 +69,9 @@ export const PT = () => {
                             />
                         </div>
                     </div>
+                        <Carousel 
+                            h3="Tecnologias"
+                        />
                 </section>
 
                 <section id="project" className={styles.containerProjects}>
