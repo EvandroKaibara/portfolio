@@ -1,4 +1,4 @@
-.container{
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,75 +6,120 @@
     
     color: var(--white);
 
-    width: 15vw;
-    padding: 50px 15px;
+    width: 100%;
+    max-width: 280px; 
+    padding: 2rem 1rem;
+    margin: 2vw;
 
     border: 3px solid var(--white);      
     border-top-left-radius: 120px;
     border-bottom-right-radius: 120px;
-    z-index: 1;
+
     box-shadow: -4px -4px 0 var(--aqua);
 }
 
-.img{
+.img {
     border: 3px solid var(--aqua);
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: clamp(100px, 30vw, 150px);
+    height: clamp(100px, 30vw, 150px);
+    object-fit: cover;
 }
 
-.containerText{
+.containerText {
     width: 100%;
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 15px 0;
+    padding: 1rem 0;
 }
 
-.h3{
-    font-size: 1.5rem;
+.h3 {
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
 }
 
-.p{
-    font-size: 0.8rem;
+.p {
+    font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
-.containerItems{
-    text-align: left;
-    margin-bottom: 15px;
+.containerItems {
+    width: 100%;
+    margin-bottom: 1rem;
 }
 
-.item{
+.item {
+    display: flex; 
     align-items: center;
+    gap: 8px;
     margin: 5px 0;
 }
 
-.icon{
-    color: #12F7D6;
+.icon {
+    color: var(--aqua);
 }
 
-.techs{
-    width: 90%;
+.techs {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
+    gap: 5px;
 }
 
-.span{
+.span {
     color: #292F36;
     background-color: var(--aqua);
     border-radius: 20px;
-    padding: 2px 5px;
-    margin: 5px;
-    font-size: 0.8rem;
+    padding: 4px 8px;
+    font-size: 0.75rem;
 }
 
-.button{
+.button {
     display: flex;
     align-items: center;
+    justify-content: center;
+
     border: none;
     background-color: var(--white);
-    font-size: 1.25rem;
-    margin-top: 25px;
-    padding: 5px 25px;
+    color: #000;
+
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    padding: 8px 20px;
     border-radius: 25px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button:hover {
+    transform: scale(1.05);
+}
+
+.cardsContainer {
+    display: grid;
+    gap: 2rem;
+    justify-items: center;
+    padding: 2rem;
+}
+
+.cardsContainer {
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .cardsContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .cardsContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1400px) {
+    .cardsContainer {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }

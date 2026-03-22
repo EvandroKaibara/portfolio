@@ -1,9 +1,16 @@
-.footer{
+.footer {
+    width: 100%;
+    background-color: var(--grey);
+    color: var(--white);
+}
+
+.footerContent {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    background-color: var(--grey);
-    padding: 2vh 0;
-    color: var(--white);
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: clamp(1rem, 3vw, 2rem);
+    text-align: center;
 }

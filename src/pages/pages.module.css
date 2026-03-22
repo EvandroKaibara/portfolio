@@ -1,25 +1,32 @@
+
 .container {
-    width: 70%;
-    padding: 3vh 2vh;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: clamp(1rem, 3vw, 2rem);
 }
 
 .home {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2vh 10vw;
+    flex-wrap: wrap;
+
+    padding: 0 5vw;
+    min-height: 100vh; 
+
     position: relative;
-    height: 100vh;
     z-index: 1;    
     background-color: var(--grey);
 }
 
 .scrollCenter {
     position: absolute;
-    top: calc(100vh - 100px);
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    height: 200px; 
+    height: 150px;
+
     display: flex;
     justify-content: center;
     pointer-events: none;
@@ -28,7 +35,7 @@
 
 .scrollLine {
     position: relative;
-    height: 20vh;
+    height: 250px;
     width: 2px;
     background: repeating-linear-gradient(
         to bottom,
@@ -37,9 +44,10 @@
         transparent 10px,
         transparent 20px
     );
-    margin: 0 auto;
     display: flex;
     justify-content: center;
+    margin-top: 10vh;
+
 }
 
 .mouse {
@@ -50,26 +58,33 @@
     animation: moveMouse 2s infinite ease-in-out;
 }
 
-.containerAbout{
+.containerAbout {
     background-image: url('/img/BackgroundImg.png');
-    height: 100vh;
+    background-size: cover;
+    background-position: center;
+
+    min-height: 100vh;
     position: relative;
     z-index: 1;
-    padding: 7vh 10vw 20vh 10vw;
+
+    padding: 0 5vw;
 }
 
-.containerAboutDescription{
-    background: transparent;
-    width: 30%;
+.containerAboutDescription {
+    width: 100%;
+    max-width: 500px;
 }
 
 .containerAboutText {
-    margin-bottom: 5vh;
+    margin-bottom: 2rem;
 }
 
-.containerProjects{
+.containerProjects {
     background: url('/img/ProjectsBg.png');
-    height: 100vh;
+    background-size: cover;
+    background-position: center;
+
+    min-height: 100vh;
 }
 
 @keyframes moveMouse {
@@ -85,5 +100,44 @@
     100% {
         top: 0;
         transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .container {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .containerAbout {
+        padding: 3rem 1.5rem;
+        text-align: center;
+    }
+
+    .containerAboutDescription {
+        max-width: 100%;
+    }
+
+    .scrollCenter {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .home {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .containerAbout {
+        padding: 4rem 3rem;
     }
 }

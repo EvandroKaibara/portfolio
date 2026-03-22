@@ -1,71 +1,123 @@
-.header{    
+.header {    
     background: color-mix(in srgb, var(--dark-grey) 90%, transparent);
     backdrop-filter: blur(6px);
 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 32px 100px;
-    font-size: 1.5rem;
+
+    padding: 3vh 7vw;
+    font-size: 1.2rem;
     font-weight: 400;
 
     position: fixed; 
     top: 0;          
     left: 0;   
-    width: 100%;      
+    width: 100vw;     
     box-sizing: border-box;  
     z-index: 1000;
 }
 
-.img{
-    transition: all 0.3s ease;
+.img {
+    transition: 0.3s;
 }
 
-.img:hover{
-    transform: scale(.9);
+.img:hover {
+    transform: scale(0.9);
     cursor: pointer;
 }
 
-.ul{
+.ul {
     display: flex;
     list-style: none;
+    gap: clamp(10px, 3vw, 40px);
 }
 
-.a{
+.a {
     text-decoration: none;  
     color: var(--white);
-    padding: 0 50px;
     transition: color 0.3s ease;
 }
 
-.a:hover{
-    text-decoration: none;  
+.a:hover {
     color: var(--aqua);
 }
 
-.containerLinks{
-    font-size: 18px;
+.containerLinks {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.links{
+.links {
     text-decoration: none;
     color: var(--white);
     border: 1px solid var(--aqua);
-    transition: all 0.3s ease;
+    transition: 0.3s;
     background: transparent;
     border-radius: 5px;
-    padding: 5px;
-    margin: 5px;
+    padding: 6px 10px;
     text-transform: uppercase;
+    font-size: 0.8rem;
 }
 
-.links:hover{
-    text-decoration: none;
+.links:hover {
     background-color: var(--aqua);
     color: var(--dark-grey);
+}
 
-    border-radius: 5px;
-    padding: 5px;
-    margin: 5px;
-    text-transform: uppercase;
+.menuButton {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menuButton span {
+    width: 25px;
+    height: 3px;
+    background: var(--white);
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+
+    .menuButton {
+        display: flex;
+    }
+
+    .ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--dark-grey);
+
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        padding: 20px 0;
+
+        transform: translateY(-200%);
+        transition: 0.3s;
+    }
+
+    .ul.active {
+        transform: translateY(0);
+    }
+
+    .containerLinks {
+        display: none; 
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .header {
+        padding: 20px 40px;
+    }
+
+    .a {
+        font-size: 1rem;
+    }
 }

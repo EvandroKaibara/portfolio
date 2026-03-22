@@ -1,25 +1,26 @@
 import styles from './carousel.module.css'
 
 export const Carousel = ({ h3 }) => {
+  const items = [
+    { src: "/img/HTML.png", alt: "HTML" },
+    { src: "/img/CSS.png", alt: "CSS" },
+    { src: "/img/JS.png", alt: "JavaScript" },
+    { src: "/img/REACT.png", alt: "React" },
+    { src: "/img/GIT.png", alt: "Git" },
+    { src: "/img/SQL.png", alt: "SQL" },
+    { src: "/img/POSTGRE.png", alt: "PostgreSQL" },
+  ];
+
   return (
     <div className={styles.container}>
       <h3 className={styles.h3}>{h3}</h3>
-      <div className={styles.items}>
-        <img src="/img/HTML.png" alt="HTML" />
-        <img src="/img/CSS.png" alt="CSS" />
-        <img src="/img/JS.png" alt="JavaScript" />
-        <img src="/img/REACT.png" alt="React" />
-        <img src="/img/GIT.png" alt="Git" />
-        <img src="/img/SQL.png" alt="SQL" />
-        <img src="/img/POSTGRE.png" alt="PostgreSQL" />
 
-        <img src="/img/HTML.png" alt="HTML" />
-        <img src="/img/CSS.png" alt="CSS" />
-        <img src="/img/JS.png" alt="JavaScript" />
-        <img src="/img/REACT.png" alt="React" />
-        <img src="/img/GIT.png" alt="Git" />
-        <img src="/img/SQL.png" alt="SQL" />
-        <img src="/img/POSTGRE.png" alt="PostgreSQL" />
+      <div className={styles.track}>
+        <div className={styles.items}>
+          {[...items, ...items].map((item, index) => (
+            <img key={index} src={item.src} alt={item.alt} />
+          ))}
+        </div>
       </div>
     </div>
   );

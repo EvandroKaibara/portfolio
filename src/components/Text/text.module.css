@@ -1,76 +1,138 @@
-.containerText{
+.containerText {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 5vw;
+
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: clamp(1rem, 4vw, 2rem);
 }
 
-.h1{
+/* TÍTULO */
+.h1 {
     position: relative;
-    font-size: 4.5rem;
+    font-size: clamp(2rem, 6vw, 4.5rem);
     font-weight: 400;
     color: var(--white);
-    line-height: 72px;
+    line-height: 1.2;
 }
 
-.h1::before{
+/* tags fake */
+.h1::before {
     content: "<h1>";
     color: var(--light-aqua); 
-    font-size: 1rem;
+    font-size: 0.9rem;
     position: absolute;
-    top: -40px;
+    top: -25px;
+    left: 0;
 }
 
 .h1::after {
     content: "</h1>";
     color: var(--light-aqua);
-    font-size: 1rem;
+    font-size: 0.9rem;
     position: absolute;
-    bottom: -20px;
+    bottom: -15px;
+    left: 0;
 }
 
-.containerP{
+/* PARÁGRAFOS */
+.containerP {
     display: flex;
     flex-direction: column;
-    padding-top: 5vh;
+    margin-top: 2rem;
     position: relative;
 }
 
-.p{
-    font-size: 1.2rem;
+.p {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     font-weight: 400;
     color: var(--white);
-    padding-left: 2vw;
-    padding-bottom: 1vh;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
-.containerP::before{
+/* tags fake */
+.containerP::before {
     content: "<p>";
     color: var(--light-aqua); 
-    font-size: 1rem;
+    font-size: 0.9rem;
     position: absolute;
-    top: 30px;
+    top: -15px;
+    left: 0;
 }
 
 .containerP::after {
     content: "</p>";
     color: var(--light-aqua);
-    font-size: 1rem;
+    font-size: 0.9rem;
     position: absolute;
-    bottom: -10px;
+    bottom: -15px;
+    left: 0;
 }
 
-.containerContact{
+/* CONTATO */
+.containerContact {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 
     color: var(--aqua);
-    font-size: 1.75rem;
-    padding-top: 5vh;
+    font-size: clamp(1.2rem, 3vw, 1.75rem);
+    margin-top: 2rem;
 }
 
-.a{
-    margin: 0 10px;
-    line-height: 60%;
+.a {
+    margin: 0 5px;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.a:hover {
+    transform: scale(1.1);
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+    .containerText {
+        align-items: center;
+        text-align: center;
+    }
+
+    .h1 {
+        font-size: 2.2rem;
+    }
+
+    .h1::before,
+    .h1::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .containerP {
+        align-items: center;
+    }
+
+    .p {
+        padding-left: 0;
+    }
+
+    .containerP::before,
+    .containerP::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .containerContact {
+        justify-content: center;
+    }
+}
+
+/* 📲 Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .h1 {
+        font-size: 3rem;
+    }
 }
