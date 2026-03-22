@@ -80,6 +80,11 @@
     border-radius: 2px;
 }
 
+.mobileLangs {
+    display: none;
+    gap: 10px;
+}
+
 @media (max-width: 768px) {
 
     .menuButton {
@@ -110,6 +115,12 @@
     .containerLinks {
         display: none; 
     }
+
+    .mobileLangs {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -119,5 +130,15 @@
 
     .a {
         font-size: 1rem;
+    }
+
+    .containerLinks {
+        display: none; 
+    }
+
+    .mobileLangs {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
     }
 }
