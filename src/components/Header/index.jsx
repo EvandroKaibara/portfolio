@@ -8,7 +8,7 @@ export const Header = ({ about, projects }) => {
     return (
         <header className={styles.header}>
 
-            <img src="/img/Logo.svg" alt="logo" className={styles.img} />
+            <a href='#home'><img src="/img/Logo.svg" alt="logo" className={styles.img} /></a>
 
             <ul className={`${styles.ul} ${open ? styles.active : ''}`}>
                 <li><a href='#home' className={styles.a}>Home</a></li>

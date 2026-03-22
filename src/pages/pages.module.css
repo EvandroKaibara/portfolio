@@ -35,7 +35,7 @@
 
 .scrollLine {
     position: relative;
-    height: 250px;
+    height: 200px;
     width: 2px;
     background: repeating-linear-gradient(
         to bottom,
@@ -46,7 +46,7 @@
     );
     display: flex;
     justify-content: center;
-    margin-top: 10vh;
+    margin-top: 5vh;
 
 }
 
@@ -84,7 +84,12 @@
     background-size: cover;
     background-position: center;
 
-    min-height: 100vh;
+}
+
+.containerProjectCards{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 5vw;
 }
 
 @keyframes moveMouse {

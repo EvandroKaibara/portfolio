@@ -1,5 +1,6 @@
 import { About } from "../../components/About"
 import { Card } from "../../components/Card"
+import { CardProject } from "../../components/CardProject"
 import { Carousel } from "../../components/Carousel"
 import { Footer } from "../../components/Footer"
 import { Header } from "../../components/Header"
@@ -69,20 +70,45 @@ export const PT = () => {
                             />
                         </div>
                     </div>
-                        <Carousel 
-                            h3="Tecnologias"
-                        />
+                    <Carousel
+                        h3="Tecnologias"
+                    />
                 </section>
 
                 <section id="project" className={styles.containerProjects}>
-                    <ProjectTitle 
+                    <ProjectTitle
                         h2="Projetos"
                         p="passe o mouse em cima para mais informações"
                     />
+
+                    <div className={styles.containerProjectCards}>
+                        <CardProject
+                            img='./img/projects/snks.jpeg'
+                            h4="SNKS"
+                            description="Página desenvolvida como parte de uma avaliação acadêmica, com foco na aplicação prática do framework Bootstrap e nos conceitos de responsividade. O projeto demonstra a construção de uma interface moderna e adaptável, garantindo uma boa experiência de uso em diferentes dispositivos, como desktops, tablets e smartphones."
+                            techs={["HTML", "CSS", "JavaScript", "Bootstrap"]}
+                            github="https://github.com/EvandroKaibara/SNKS"
+                        />
+                        <CardProject
+                            img='./img/projects/sabara.jpeg'
+                            h4="Sabará"
+                            description="O projeto tem como objetivo otimizar a comunicação entre os diferentes setores do Hospital Sabará, visando reduzir falhas operacionais e retrabalho. A proposta busca tornar os processos mais eficientes, promovendo maior integração entre as equipes e melhorando a qualidade do atendimento."
+                            github="https://github.com/EvandroKaibara/Sabara"
+                            techs={["React", "Node"]}
+                        />
+                        <CardProject
+                            img='./img/projects/magellan.jpeg'
+                            h4="Magellan UC"
+                            description="This project was developed with the goal of creating a landing page for the Magellan Group, highlighting one of its subsidiaries, Magellan UC, which specializes in underground excavation in Florida. The page was designed to present the services in a strategic and attractive way, focusing on usability, responsive design, and efficient communication with the target audience."
+                            github="https://github.com/EvandroKaibara/MagellanGroup"
+                            techs={["React", "Node"]}
+                        />
+                    </div>
+
                 </section>
             </main>
-            
-            <Footer p="© 2025 EvandroKaibara. Todos os direitos reservados."/>
+
+            <Footer p="© 2025 EvandroKaibara. Todos os direitos reservados." />
         </>
     )
 }

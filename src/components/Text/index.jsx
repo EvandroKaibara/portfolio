@@ -38,7 +38,7 @@ export const Text = ({ h1, paragraph1, paragraph2, paragraph3, h2, lang }) => {
                     <img src="/img/Mail.png" alt="Mail" />
                 </a>
 
-                <a href="#" target="_blank" className={styles.a}>
+                <a href="https://www.linkedin.com/in/evandro-kaibara-53247927a/" target="_blank" className={styles.a}>
                     <img src="/img/Linkedin.png" alt="Linkedin" />
                 </a>
 
