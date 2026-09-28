@@ -94,7 +94,6 @@
     transform: scale(1.1);
 }
 
-/* 📱 Mobile */
 @media (max-width: 768px) {
     .containerText {
         align-items: center;
@@ -107,7 +106,6 @@
 
     .h1::before,
     .h1::after {
-        left: 50%;
         transform: translateX(-50%);
     }
 
@@ -121,7 +119,6 @@
 
     .containerP::before,
     .containerP::after {
-        left: 50%;
         transform: translateX(-50%);
     }
 
@@ -130,7 +127,6 @@
     }
 }
 
-/* 📲 Tablet */
 @media (min-width: 769px) and (max-width: 1024px) {
     .h1 {
         font-size: 3rem;
