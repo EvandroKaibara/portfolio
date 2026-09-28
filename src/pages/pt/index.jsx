@@ -83,6 +83,20 @@ export const PT = () => {
 
                     <div className={styles.containerProjectCards}>
                         <CardProject
+                            img='./img/projects/snowecia.png'
+                            h4="Snow&Cia"
+                            description="Sistema Snow&Cia desenvolvido para gerenciar serviços e reservas de cuidados para pets. A plataforma permite que clientes cadastrem seus animais, solicitem serviços, selecionem datas e adicionais, enquanto administradoras acompanham reservas, pagamentos, agenda e serviços cadastrados. O projeto prioriza uma interface moderna, responsiva e intuitiva para uso em computadores, tablets e smartphones."
+                            github="https://github.com/EvandroKaibara/snowcia"
+                            techs={["React", "Java", "Spring Boot", "JWT", "PostgreSQL", "Flyway"]}
+                        />
+                        <CardProject
+                            img='./img/projects/magellan.jpeg'
+                            h4="Magellan UC"
+                            description="Este projeto foi desenvolvido com o objetivo de criar uma landing page para o Magellan Group, destacando uma de suas subsidiárias, a Magellan UC, especializada em escavações subterrâneas na Flórida. A página foi projetada para apresentar os serviços de maneira estratégica e atraente, com foco na usabilidade, no design responsivo e na comunicação eficiente com o público-alvo."
+                            github="https://github.com/EvandroKaibara/MagellanGroup"
+                            techs={["React", "Node"]}
+                        />
+                        <CardProject
                             img='./img/projects/snks.jpeg'
                             h4="SNKS"
                             description="Página desenvolvida como parte de uma avaliação acadêmica, com foco na aplicação prática do framework Bootstrap e nos conceitos de responsividade. O projeto demonstra a construção de uma interface moderna e adaptável, garantindo uma boa experiência de uso em diferentes dispositivos, como desktops, tablets e smartphones."
@@ -94,13 +108,6 @@ export const PT = () => {
                             h4="Sabará"
                             description="O projeto tem como objetivo otimizar a comunicação entre os diferentes setores do Hospital Sabará, visando reduzir falhas operacionais e retrabalho. A proposta busca tornar os processos mais eficientes, promovendo maior integração entre as equipes e melhorando a qualidade do atendimento."
                             github="https://github.com/EvandroKaibara/Sabara"
-                            techs={["React", "Node"]}
-                        />
-                        <CardProject
-                            img='./img/projects/magellan.jpeg'
-                            h4="Magellan UC"
-                            description="This project was developed with the goal of creating a landing page for the Magellan Group, highlighting one of its subsidiaries, Magellan UC, which specializes in underground excavation in Florida. The page was designed to present the services in a strategic and attractive way, focusing on usability, responsive design, and efficient communication with the target audience."
-                            github="https://github.com/EvandroKaibara/MagellanGroup"
                             techs={["React", "Node"]}
                         />
                     </div>
