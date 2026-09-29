@@ -196,6 +196,7 @@
 
     .home > :first-child {
         margin-left: calc(clamp(1rem, 7vw, 7rem) - clamp(1rem, 5vw, 5rem));
+        align-self: center;
     }
 
     .containerProjectCards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
