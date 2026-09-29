@@ -7,9 +7,9 @@
     color: var(--white);
 
     width: 100%;
-    max-width: 280px; 
-    padding: 2rem 1rem;
-    margin: 2vw;
+    max-width: 300px;
+    padding: 2rem 1.25rem;
+    margin: 0;
 
     border: 3px solid var(--white);      
     border-top-left-radius: 120px;
@@ -52,6 +52,8 @@
     align-items: center;
     gap: 8px;
     margin: 5px 0;
+    text-align: left;
+    overflow-wrap: anywhere;
 }
 
 .icon {
@@ -86,9 +88,11 @@
     margin-top: 1.5rem;
     padding: 8px 20px;
     border-radius: 25px;
+    text-decoration: none;
 
     cursor: pointer;
     transition: 0.3s;
+    gap: 0.4rem;
 }
 
 .button:hover {
@@ -121,5 +125,14 @@
 @media (min-width: 1400px) {
     .cardsContainer {
         grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: min(100%, 320px);
+        padding: 1.5rem 1rem;
+        border-top-left-radius: 90px;
+        border-bottom-right-radius: 90px;
     }
 }

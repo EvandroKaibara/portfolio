@@ -1,10 +1,10 @@
 .container {
     background-color: var(--grey);
-    width: 20vw;
-    min-width: 20vw; 
-    max-width: 320px; 
-    margin: 5vh 3vw;
-    padding: 25px;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    margin: 0;
+    padding: clamp(1rem, 3vw, 1.5rem);
     color: var(--white);
 
     border: 3px solid var(--white);
@@ -16,7 +16,6 @@
     flex-direction: column;
     transition: all 0.3s ease;
 }
-
 .container:hover {
     transform: translateY(-10px) scale(1.02);
 
@@ -26,12 +25,13 @@
         -6px -6px 0 var(--aqua),
         0 12px 30px rgba(0, 0, 0, 0.4);
 }
-
 .img {
     border-radius: 5px;
     margin-bottom: 1vh;
     transition: transform 0.3s ease;
-    height: 20vh;
+    width: 100%;
+    height: clamp(150px, 30vw, 210px);
+    object-fit: cover;
 }
 
 
@@ -41,8 +41,9 @@
 }
 
 .p {
-    margin: 1vh 0;
-    min-height: 200px;
+    margin: 1rem 0;
+    min-height: 0;
+    line-height: 1.55;
 }
 
 .techs {
@@ -65,11 +66,11 @@
     transform: translateY(-2px);
 }
 
+.container > a { align-self: flex-start; margin-top: auto; padding-top: 0.5rem; }
+.container > a img { width: 32px; }
+
 @media (max-width: 480px) {
     .container {
-        width: 90%;
-        min-width: unset;
-        margin: 3vh auto;
         padding: 20px;
     }
 
@@ -84,17 +85,5 @@
     .tag {
         font-size: 0.8rem;
         padding: 3px 6px;
-    }
-}
-
-@media (max-width: 768px) {
-    .container {
-        width: 45vw;
-    }
-}
-
-@media (min-width: 1200px) {
-    .container {
-        width: 20vw;
     }
 }

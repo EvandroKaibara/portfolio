@@ -31,10 +31,16 @@ export const Card = ({ career, curfew, location }) => {
                 <span className={styles.span}>GIT</span>
                 <span className={styles.span}>SQL</span>
                 <span className={styles.span}>POSTGRE</span>
+                <span className={styles.span}>JAVA</span>
             </div>
-            <button className={styles.button}>
+            <a
+                className={styles.button}
+                href="https://drive.google.com/file/d/1pH4nooS2GNIG8QQ_-0o_GAMtBaFc2YrL/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
+            >
                 {curfew} <TiExport />
-            </button>
+            </a>
         </div>
     )
 }
