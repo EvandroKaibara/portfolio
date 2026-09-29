@@ -1,12 +1,12 @@
 import { About } from "../../components/About"
 import { Card } from "../../components/Card"
 import { CardProject } from "../../components/CardProject"
-import { Carousel } from "../../components/Carousel"
 import { Footer } from "../../components/Footer"
 import { Header } from "../../components/Header"
 import { Language } from "../../components/Language"
 import { ProjectTitle } from "../../components/ProjectTitle"
 import { Text } from "../../components/Text"
+import { Timeline } from "../../components/Timeline"
 import styles from '../pages.module.css'
 
 export const ES = () => {
@@ -34,13 +34,12 @@ export const ES = () => {
                             lang='es'
                         />
                     </div>
-                </section>
-
-                <div className={styles.scrollCenter}>
-                    <div className={styles.scrollLine}>
-                        <img src="/img/mouse.png" alt="Roll down" className={styles.mouse} />
+                    <div className={styles.scrollCenter} aria-hidden="true">
+                        <div className={styles.scrollLine}>
+                            <img src="/img/mouse.png" alt="" className={styles.mouse} />
+                        </div>
                     </div>
-                </div>
+                </section>
 
                 <section id="about" className={styles.containerAbout}>
                     <div className={styles.containerAboutDescription}>
@@ -50,29 +49,46 @@ export const ES = () => {
                                 p={"Desde los 14 años, tengo un gran interés por la programación y la creación de sitios web, áreas que despiertan mi curiosidad y me impulsan a seguir aprendiendo cada vez más. Además, me gusta escuchar música, algo que me inspira y me acompaña mientras exploro nuevas tecnologías y mejoro mis habilidades en el mundo del desarrollo."}
                             />
                         </div>
-                        <div className={styles.containerAboutLanguages}>
-                            <Language
-                                h3="Idiomas"
-
-                                portuguese="Portugués"
-                                portugueseStatus="C2"
-                                portuguesLevel="Competente (Nativo)"
-                                portuguesePercent={100}
-
-                                english="Inglés"
-                                englishStatus="C2"
-                                englishLevel="Competente"
-                                englishPercent={100}
-
-                                spanish="Español"
-                                spanishStatus="C1"
-                                spanishLevel="Avanzado"
-                                spanishPercent={80}
-                            />
-                        </div>
                     </div>
-                    <Carousel
-                        h3="Tecnologías"
+                    <div className={styles.containerAboutLanguages}>
+                        <Language
+                            h3="Idiomas"
+
+                            portuguese="Portugués"
+                            portugueseStatus="C2"
+                            portuguesLevel="Competente (Nativo)"
+                            portuguesePercent={100}
+
+                            english="Inglés"
+                            englishStatus="C2"
+                            englishLevel="Competente"
+                            englishPercent={100}
+
+                            spanish="Español"
+                            spanishStatus="C1"
+                            spanishLevel="Avanzado"
+                            spanishPercent={80}
+                        />
+                    </div>
+                    <Timeline
+                        h3="Experiencia"
+                        events={[
+                            {
+                                year: "2022 — Actualidad",
+                                title: "Profesor de Inglés",
+                                description: "Wizard",
+                            },
+                            {
+                                year: "2024 — Actualidad",
+                                title: "Ingeniero de Software",
+                                description: "Magellan Group",
+                            },
+                            {
+                                year: "2026",
+                                title: "Ganador de Global Solution 2026",
+                                description: "FIAP · 2x beca de mérito · Finalista de NEXT 2026",
+                            },
+                        ]}
                     />
                 </section>
             </main>

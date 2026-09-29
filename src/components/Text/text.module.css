@@ -84,6 +84,10 @@
     margin-top: 2rem;
 }
 
+.containerContact h2 { font-size: inherit; }
+
+.containerContact img { width: clamp(28px, 7vw, 38px); }
+
 .a {
     margin: 0 5px;
     cursor: pointer;
@@ -106,6 +110,7 @@
 
     .h1::before,
     .h1::after {
+        left: 50%;
         transform: translateX(-50%);
     }
 
@@ -119,11 +124,13 @@
 
     .containerP::before,
     .containerP::after {
+        left: 50%;
         transform: translateX(-50%);
     }
 
     .containerContact {
         justify-content: center;
+        margin-top: 2.5rem;
     }
 }
 

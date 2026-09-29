@@ -12,20 +12,20 @@
     align-items: center;
     flex-wrap: wrap;
 
-    padding: 0 5vw;
+    padding: 7rem clamp(1rem, 5vw, 5rem) 3rem;
     min-height: 100vh; 
 
     position: relative;
-    z-index: 1;    
+    z-index: 2;
     background-color: var(--grey);
 }
 
 .scrollCenter {
     position: absolute;
-    bottom: 20px;
+    bottom: -3rem;
     left: 50%;
     transform: translateX(-50%);
-    height: 150px;
+    height: 8rem;
 
     display: flex;
     justify-content: center;
@@ -35,7 +35,7 @@
 
 .scrollLine {
     position: relative;
-    height: 200px;
+    height: 100%;
     width: 2px;
     background: repeating-linear-gradient(
         to bottom,
@@ -46,8 +46,6 @@
     );
     display: flex;
     justify-content: center;
-    margin-top: 5vh;
-
 }
 
 .mouse {
@@ -55,6 +53,9 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    width: 40px;
+    height: auto;
+    max-width: none;
     animation: moveMouse 2s infinite ease-in-out;
 }
 
@@ -63,11 +64,15 @@
     background-size: cover;
     background-position: center;
 
-    min-height: 100vh;
+    min-height: auto;
     position: relative;
     z-index: 1;
 
-    padding: 0 5vw;
+    padding: clamp(3rem, 8vw, 6rem) clamp(1rem, 5vw, 5rem);
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+    gap: clamp(2.5rem, 5vw, 5rem);
 }
 
 .containerAboutDescription {
@@ -75,21 +80,29 @@
     max-width: 500px;
 }
 
+.containerAboutLanguages {
+    width: 100%;
+    max-width: 500px;
+}
+
 .containerAboutText {
-    margin-bottom: 2rem;
+    margin-bottom: 0;
 }
 
 .containerProjects {
     background: url('/img/ProjectsBg.png');
     background-size: cover;
     background-position: center;
-
+    padding-bottom: clamp(2rem, 6vw, 5rem);
+    padding-top: clamp(2rem, 5vw, 4rem);
 }
 
 .containerProjectCards{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 5vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(1.25rem, 3vw, 2.5rem);
+    width: min(100% - 2rem, 1200px);
+    margin: 0 auto;
 }
 
 @keyframes moveMouse {
@@ -113,7 +126,9 @@
     .home {
         flex-direction: column;
         text-align: center;
-        gap: 2rem;
+        gap: 2.5rem;
+        min-height: auto;
+        padding-top: 6.5rem;
     }
 
     .container {
@@ -121,9 +136,15 @@
         padding: 1rem;
     }
 
+    .home > .container {
+        flex: 0 1 auto;
+        max-width: none;
+    }
+
     .containerAbout {
-        padding: 3rem 1.5rem;
+        padding: 3rem 1rem;
         text-align: center;
+        display: block;
     }
 
     .containerAboutDescription {
@@ -133,6 +154,8 @@
     .scrollCenter {
         display: none;
     }
+
+    .containerProjectCards { grid-template-columns: 1fr; }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -140,9 +163,40 @@
     .home {
         flex-direction: column;
         gap: 3rem;
+        padding-top: 7rem;
+    }
+
+    .home > .container {
+        flex: 0 1 auto;
+        max-width: none;
     }
 
     .containerAbout {
         padding: 4rem 3rem;
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
+
+    .containerProjectCards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1025px) {
+    .home {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: clamp(4rem, 5vw, 6rem);
+    }
+
+    .home > .container {
+        flex: 1 1 0;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .home > :first-child {
+        margin-left: calc(clamp(1rem, 7vw, 7rem) - clamp(1rem, 5vw, 5rem));
+    }
+
+    .containerProjectCards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }

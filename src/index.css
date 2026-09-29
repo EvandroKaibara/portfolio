@@ -7,6 +7,14 @@
   scroll-behavior: smooth;
 }
 
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-padding-top: 5.5rem; }
+
+body { min-width: 320px; overflow-x: hidden; background-color: var(--grey); }
+
+img { display: block; max-width: 100%; }
+
 :root{
   --grey: #282D34;
   --dark-grey: #1E1E1E;
