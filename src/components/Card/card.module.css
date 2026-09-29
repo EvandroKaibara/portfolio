@@ -128,6 +128,20 @@
     }
 }
 
+@media (min-width: 1025px) {
+    .container {
+        max-width: 340px;
+        padding: 2.5rem 1.5rem;
+        min-height: 540px;
+        height: min(72vh, 590px);
+    }
+
+    .img {
+        width: 165px;
+        height: 165px;
+    }
+}
+
 @media (max-width: 480px) {
     .container {
         max-width: min(100%, 320px);
