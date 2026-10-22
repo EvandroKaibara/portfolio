@@ -4,7 +4,7 @@ import { RiMapPinLine } from "react-icons/ri";
 import { RiBriefcase3Line } from "react-icons/ri";
 import { TiExport } from "react-icons/ti";
 
-export const Card = ({ career, curfew, location }) => {
+export const Card = ({ career, curfew, location, link }) => {
     return (
         <div className={styles.container}>
             <img src="/img/Me.jpg" className={styles.img} alt="" />
@@ -35,7 +35,7 @@ export const Card = ({ career, curfew, location }) => {
             </div>
             <a
                 className={styles.button}
-                href="https://drive.google.com/file/d/1pH4nooS2GNIG8QQ_-0o_GAMtBaFc2YrL/view?usp=sharing"
+                href={link}
                 target="_blank"
                 rel="noreferrer"
             >
