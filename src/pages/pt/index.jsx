@@ -95,7 +95,6 @@ export const PT = () => {
                 <section id="project" className={styles.containerProjects}>
                     <ProjectTitle
                         h2="Projetos"
-                        p="passe o mouse em cima para mais informações"
                     />
 
                     <div className={styles.containerProjectCards}>
