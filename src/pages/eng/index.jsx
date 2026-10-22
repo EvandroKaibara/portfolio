@@ -21,7 +21,7 @@ export const ENG = () => {
                     <Card
                         career="Software Engineer"
                         location="São Paulo - Brazil"
-                        curfew="Curfew"
+                        curfew="Curriculum"
                     />
                     <div className={styles.container}>
                         <Text
