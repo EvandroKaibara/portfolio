@@ -27,7 +27,7 @@ export const PT = () => {
                         career="Engenheiro de Software"
                         location="São Paulo - SP"
                         curfew="Currículo"
-                        link="https://drive.google.com/file/d/1e9UCHewFwDCmxKvIgIDzcxuXCgx15oST/view?usp=sharing"
+                        link="https://drive.google.com/file/d/1vPV85rmg18Es3dUEjBJMT3T7jOSgH5LZ/view?usp=sharing"
                     />
                     <div className={styles.container}>
                         <Text

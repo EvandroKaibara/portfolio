@@ -27,7 +27,7 @@ export const ENG = () => {
                         career="Software Engineer"
                         location="São Paulo - Brazil"
                         curfew="Curriculum"
-                        link="https://drive.google.com/file/d/16QjCd7t6KU5BhREWqilW2TevuFFXBCKG/view?usp=sharing"
+                        link="https://drive.google.com/file/d/1gNcRvS33wIyRbuCgd8uGRBR6aesoigR5/view?usp=sharing"
                     />
                     <div className={styles.container}>
                         <Text
