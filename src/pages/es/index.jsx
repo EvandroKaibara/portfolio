@@ -4,6 +4,7 @@ import { CardProject } from "../../components/CardProject"
 import { Footer } from "../../components/Footer"
 import { Header } from "../../components/Header"
 import { Language } from "../../components/Language"
+import { ProjectCarousel } from "../../components/ProjectCarousel"
 import { ProjectTitle } from "../../components/ProjectTitle"
 import { Text } from "../../components/Text"
 import { Timeline } from "../../components/Timeline"
@@ -87,7 +88,7 @@ export const ES = () => {
                             {
                                 year: "2026",
                                 title: "Ganador de Global Solution 2026",
-                                description: "FIAP · 2x beca de mérito · Finalista de NEXT 2026",
+                                description: "FIAP · 2x beca de mérito · 2º lugar en NEXT 2026",
                             },
                         ]}
                     />
@@ -99,7 +100,7 @@ export const ES = () => {
                     h2="Proyectos"
                 />
 
-                <div className={styles.containerProjectCards}>
+                <ProjectCarousel labels={{ prev: "Anterior", next: "Siguiente", carousel: "Carrusel", grid: "Cuadrícula" }}>
                     <CardProject
                         img='./img/projects/snowecia.png'
                         h4="Snow&Cia"
@@ -128,7 +129,7 @@ export const ES = () => {
                         github="https://github.com/EvandroKaibara/Sabara"
                         techs={["React", "Node"]}
                     />
-                </div>
+                </ProjectCarousel>
             </section>
 
             <Footer p="© 2025 EvandroKaibara. Todos los derechos reservados." />

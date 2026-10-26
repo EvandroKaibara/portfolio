@@ -4,6 +4,7 @@ import { CardProject } from "../../components/CardProject"
 import { Footer } from "../../components/Footer"
 import { Header } from "../../components/Header"
 import { Language } from "../../components/Language"
+import { ProjectCarousel } from "../../components/ProjectCarousel"
 import { ProjectTitle } from "../../components/ProjectTitle"
 import { Text } from "../../components/Text"
 import { Timeline } from "../../components/Timeline"
@@ -86,7 +87,7 @@ export const ENG = () => {
                             {
                                 year: "2026",
                                 title: "Global Solution 2026 Winner",
-                                description: "FIAP · 2x merit scholarship recipient · NEXT 2026 finalist",
+                                description: "FIAP · 2x merit scholarship recipient · 2nd place at NEXT 2026",
                             },
                         ]}
                     />
@@ -97,7 +98,7 @@ export const ENG = () => {
                         h2="Projects"
                     />
 
-                    <div className={styles.containerProjectCards}>
+                    <ProjectCarousel labels={{ prev: "Previous", next: "Next", carousel: "Carousel", grid: "Grid" }}>
                         <CardProject
                             img='./img/projects/snowecia.png'
                             h4="Snow&Cia"
@@ -126,7 +127,7 @@ export const ENG = () => {
                             github="https://github.com/EvandroKaibara/Sabara"
                             techs={["React", "Node"]}
                         />
-                    </div>
+                    </ProjectCarousel>
                 </section>
             </main>
 

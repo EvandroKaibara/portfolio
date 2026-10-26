@@ -1,0 +1,119 @@
+.container {
+    --gap: clamp(1.25rem, 3vw, 2.5rem);
+    width: min(100% - 2rem, 1200px);
+    margin: 0 auto;
+}
+
+.toggle {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+.toggleButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: 1.4rem;
+    color: var(--white);
+    background-color: var(--grey);
+    border: 2px solid var(--aqua);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.toggleButton:hover,
+.toggleButton[aria-pressed="true"] {
+    color: #292F36;
+    background-color: var(--aqua);
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    gap: var(--gap);
+    flex: 1;
+    min-width: 0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 1.5rem 0.5rem;
+    scrollbar-width: none;
+}
+
+.track::-webkit-scrollbar {
+    display: none;
+}
+
+.item {
+    display: flex;
+    min-width: 0;
+    scroll-snap-align: start;
+}
+
+.item > * {
+    flex: 1;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap);
+    padding: 1.5rem 0.5rem;
+}
+
+.arrow {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    font-size: 1.8rem;
+    color: var(--white);
+    background-color: var(--grey);
+    border: 2px solid var(--aqua);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.arrow:hover {
+    color: #292F36;
+    background-color: var(--aqua);
+}
+
+@media (max-width: 480px) {
+    .arrow {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .track {
+        grid-auto-columns: calc((100% - var(--gap)) / 2);
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1025px) {
+    .track {
+        grid-auto-columns: calc((100% - 2 * var(--gap)) / 3);
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
