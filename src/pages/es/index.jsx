@@ -140,6 +140,13 @@ export const ES = () => {
                         techs={["React", "Java", "Spring Boot", "JWT", "PostgreSQL", "Flyway"]}
                     />
                     <CardProject
+                        img='./img/projects/snowcia-calculator.png'
+                        h4="Snow&Cia Calculator"
+                        description="Calculadora de alojamiento del Hotelzinho Snow&Cia. Cuenta las noches a partir de la entrada y la salida, aplica la tarifa de cada una (feriados, diciembre y enero, promoción para estadías largas), calcula la seña y el saldo y genera el presupuesto en texto para enviarlo por WhatsApp. Tiene una segunda pestaña para el servicio de Catsitter y funciona completa en el navegador, sin backend."
+                        github="https://github.com/EvandroKaibara/snowcia-calculator"
+                        techs={["React", "TypeScript", "Vite"]}
+                    />
+                    <CardProject
                         img='./img/projects/magellan.jpeg'
                         h4="Magellan UC"
                         description="Este proyecto se desarrolló con el objetivo de crear una página de inicio para el Grupo Magellan, destacando una de sus filiales, Magellan UC, especializada en excavaciones subterráneas en Florida. La página se diseñó para presentar los servicios de forma estratégica y atractiva, priorizando la usabilidad, el diseño adaptable y una comunicación eficaz con el público objetivo."
