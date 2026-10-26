@@ -6,6 +6,7 @@ export const ProjectCarousel = ({ children, labels = {} }) => {
     const { prev = "Anterior", next = "Próximo", carousel = "Carrossel", grid = "Grade" } = labels
     const [view, setView] = useState('carousel')
     const [switched, setSwitched] = useState(false)
+    const [target, setTarget] = useState(null)
     const track = useRef(null)
     const timer = useRef(null)
     const items = Children.toArray(children)
@@ -16,10 +17,18 @@ export const ProjectCarousel = ({ children, labels = {} }) => {
     const setWidth = () => track.current.children[items.length].offsetLeft - track.current.children[0].offsetLeft
 
     const show = (next) => {
-        if (next === view) return
-        setView(next)
+        if (next === view || target) return
+        setTarget(next)
+    }
+
+    const swap = (e) => {
+        if (e.target !== e.currentTarget || e.animationName !== styles.viewOut) return
+        setView(target)
+        setTarget(null)
         setSwitched(true)
     }
+
+    const motion = target ? styles.leave : switched ? styles.enter : ''
 
     const move = (dir) => {
         const el = track.current
@@ -46,9 +55,9 @@ export const ProjectCarousel = ({ children, labels = {} }) => {
             </div>
 
             {view === 'grid' ? (
-                <div className={`${styles.grid} ${switched ? styles.enter : ''}`}>{items}</div>
+                <div className={`${styles.grid} ${motion}`} onAnimationEnd={swap}>{items}</div>
             ) : (
-                <div className={`${styles.carousel} ${switched ? styles.enter : ''}`}>
+                <div className={`${styles.carousel} ${motion}`} onAnimationEnd={swap}>
                     <button className={styles.arrow} onClick={() => move(-1)} aria-label={prev}><RiArrowLeftSLine /></button>
                     <div ref={track} className={styles.track} onScroll={loop}>
                         {items.map((item) => <div key={item.key} className={styles.item}>{item}</div>)}

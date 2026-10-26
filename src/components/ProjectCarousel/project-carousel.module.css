@@ -49,6 +49,18 @@
     animation: viewIn 350ms var(--ease-out) backwards;
 }
 
+.leave {
+    animation: viewOut 200ms cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
+@keyframes viewOut {
+    to {
+        opacity: 0;
+        transform: translateY(-6px);
+        filter: blur(3px);
+    }
+}
+
 @keyframes viewIn {
     from {
         opacity: 0;
