@@ -21,6 +21,40 @@ img { display: block; max-width: 100%; }
   --white: #FFFFFF;
   --aqua: #12F7D6;
   --light-aqua: #98FAEC;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(12px);
+  filter: blur(4px);
+  transition:
+    opacity 500ms var(--ease-out),
+    transform 500ms var(--ease-out),
+    filter 500ms var(--ease-out);
+}
+
+[data-reveal="visible"] {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
 }
 
 

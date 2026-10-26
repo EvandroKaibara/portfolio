@@ -8,9 +8,12 @@ import { ProjectCarousel } from "../../components/ProjectCarousel"
 import { ProjectTitle } from "../../components/ProjectTitle"
 import { Text } from "../../components/Text"
 import { Timeline } from "../../components/Timeline"
+import { useReveal } from "../../hooks/useReveal"
 import styles from '../pages.module.css'
 
 export const ES = () => {
+    useReveal()
+
     return (
         <>
             <Header
