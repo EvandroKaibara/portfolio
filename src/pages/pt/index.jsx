@@ -15,6 +15,7 @@ export const PT = () => {
         <>
             <Header
                 about="Sobre"
+                awards="Prêmios"
                 projects="Projetos"
             />
             <main className={styles.main}>
@@ -91,6 +92,33 @@ export const PT = () => {
                             },
                         ]}
                     />
+                </section>
+
+                <section id="awards" className={styles.containerProjects}>
+                    <ProjectTitle
+                        h2="Prêmios e Certificados"
+                    />
+
+                    <ProjectCarousel>
+                        <CardProject
+                            img='./img/awards/Global-Solution-2026.jpeg'
+                            h4="Global Solution 2026"
+                            description="Conquistamos o 1º lugar na Global Solution 2026 Space Connect, da FIAP. Nosso grupo, o ASTRO, desenvolveu o AstroSafra, uma plataforma que verifica em tempo real as condições das terras de plantio a partir de dados de satélites e mapeia as melhores rotas para o transporte de tudo o que é produzido."
+                            techs={["FIAP", "1º lugar"]}
+                        />
+                        <CardProject
+                            img='./img/awards/Talent-Summit-2026-web.jpg'
+                            h4="Talent Summit 2026"
+                            description="Fui um dos Top Talents da FIAP, os melhores alunos da faculdade, escolhidos para apresentar seus projetos diretamente a representantes de grandes empresas."
+                            techs={["FIAP", "Top Talent"]}
+                        />
+                        <CardProject
+                            img='./img/awards/Next-2026.jpeg'
+                            h4="NEXT 2026"
+                            description="Fui TOP 2 entre mais de 30 grupos que apresentaram um CRM para o Hospital São Rafael. Nosso grupo desenvolveu o CRM Centrum, um CRM modular com uma LLM integrada que gera relatórios a partir dos dados do hospital."
+                            techs={["FIAP", "2º lugar"]}
+                        />
+                    </ProjectCarousel>
                 </section>
 
                 <section id="project" className={styles.containerProjects}>

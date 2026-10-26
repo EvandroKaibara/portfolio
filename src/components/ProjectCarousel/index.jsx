@@ -11,8 +11,8 @@ export const ProjectCarousel = ({ children, labels = {} }) => {
 
     useEffect(() => () => clearTimeout(timer.current), [])
 
-    // o trilho tem os cards duas vezes: a largura de um conjunto é o ponto do loop
-    // shortcut: assume mais cards que o visível por vez, senão a cópia aparece junto
+    // com mais de 3 cards (o máximo visível) o trilho os repete: a largura de um conjunto é o ponto do loop
+    const loops = items.length > 3
     const setWidth = () => track.current.children[items.length].offsetLeft - track.current.children[0].offsetLeft
 
     const move = (dir) => {
@@ -21,7 +21,7 @@ export const ProjectCarousel = ({ children, labels = {} }) => {
         // o primeiro card repousa no padding do trilho, não em 0
         const start = parseFloat(getComputedStyle(el).paddingLeft)
 
-        if (dir < 0 && el.scrollLeft <= start) el.scrollTo({ left: start + setWidth(), behavior: 'instant' })
+        if (loops && dir < 0 && el.scrollLeft <= start) el.scrollTo({ left: start + setWidth(), behavior: 'instant' })
         el.scrollBy({ left: dir * el.clientWidth, behavior: 'smooth' })
     }
 
@@ -29,7 +29,7 @@ export const ProjectCarousel = ({ children, labels = {} }) => {
     const loop = () => {
         clearTimeout(timer.current)
         timer.current = setTimeout(() => {
-            if (track.current && track.current.scrollLeft >= setWidth() - 1) {
+            if (loops && track.current && track.current.scrollLeft >= setWidth() - 1) {
                 track.current.scrollBy({ left: -setWidth(), behavior: 'instant' })
             }
         }, 100)
@@ -49,7 +49,7 @@ export const ProjectCarousel = ({ children, labels = {} }) => {
                     <button className={styles.arrow} onClick={() => move(-1)} aria-label={prev}><RiArrowLeftSLine /></button>
                     <div ref={track} className={styles.track} onScroll={loop}>
                         {items.map((item) => <div key={item.key} className={styles.item}>{item}</div>)}
-                        {items.map((item) => <div key={`${item.key}-copy`} className={styles.item} aria-hidden="true" inert>{item}</div>)}
+                        {loops && items.map((item) => <div key={`${item.key}-copy`} className={styles.item} aria-hidden="true" inert>{item}</div>)}
                     </div>
                     <button className={styles.arrow} onClick={() => move(1)} aria-label={next}><RiArrowRightSLine /></button>
                 </div>

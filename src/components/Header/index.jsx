@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router'
 import styles from './header.module.css'
 
-export const Header = ({ about, projects }) => {
+export const Header = ({ about, awards, projects }) => {
     const [open, setOpen] = useState(false)
 
     return (
@@ -13,6 +13,7 @@ export const Header = ({ about, projects }) => {
             <ul className={`${styles.ul} ${open ? styles.active : ''}`}>
                 <li><a href='#home' className={styles.a}>Home</a></li>
                 <li><a href='#about' className={styles.a}>{about}</a></li>
+                <li><a href="#awards" className={styles.a}>{awards}</a></li>
                 <li><a href="#project" className={styles.a}>{projects}</a></li>
 
                 <li className={styles.mobileLangs}>
