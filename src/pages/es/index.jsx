@@ -147,7 +147,7 @@ export const ES = () => {
                         techs={["React", "TypeScript", "Vite"]}
                     />
                     <CardProject
-                        img='./img/projects/ek-classes.png'
+                        img='./img/projects/ek-classes.jpeg'
                         h4="EK Classes"
                         description="Landing page de mis clases particulares de conversación en inglés (EK Classes). Presenta el método de enseñanza, el profesor y el formato de las clases, con video de presentación, animaciones suaves y un diseño responsivo pensado para convertir visitantes en alumnos."
                         github="https://github.com/EvandroKaibara/ek-classes"
