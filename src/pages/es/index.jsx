@@ -147,6 +147,13 @@ export const ES = () => {
                         techs={["React", "TypeScript", "Vite"]}
                     />
                     <CardProject
+                        img='./img/projects/ek-classes.png'
+                        h4="EK Classes"
+                        description="Landing page de mis clases particulares de conversación en inglés (EK Classes). Presenta el método de enseñanza, el profesor y el formato de las clases, con video de presentación, animaciones suaves y un diseño responsivo pensado para convertir visitantes en alumnos."
+                        github="https://github.com/EvandroKaibara/ek-classes"
+                        techs={["React", "TypeScript", "Vite", "Motion"]}
+                    />
+                    <CardProject
                         img='./img/projects/magellan.jpeg'
                         h4="Magellan UC"
                         description="Este proyecto se desarrolló con el objetivo de crear una página de inicio para el Grupo Magellan, destacando una de sus filiales, Magellan UC, especializada en excavaciones subterráneas en Florida. La página se diseñó para presentar los servicios de forma estratégica y atractiva, priorizando la usabilidad, el diseño adaptable y una comunicación eficaz con el público objetivo."
