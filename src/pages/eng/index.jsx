@@ -142,13 +142,14 @@ export const ENG = () => {
                             h4="Snow&Cia Calculator"
                             description="Lodging calculator for the Snow&Cia pet hotel. It counts the daily rates from check-in and check-out, applies each day's price (holidays, December and January, long-stay promotion), calculates the deposit and the balance, and generates a text quote to send over WhatsApp. A second tab covers the Catsitter service, and everything runs in the browser, with no backend."
                             github="https://github.com/EvandroKaibara/snowcia-calculator"
+                            deploy="https://snowcia-calculator.vercel.app"
                             techs={["React", "TypeScript", "Vite"]}
                         />
                         <CardProject
                             img='./img/projects/ek-classes.jpeg'
                             h4="EK Classes"
                             description="Landing page for my private English conversation classes (EK Classes). It presents the teaching method, the teacher and the class format, with a poster video, smooth animations and a responsive layout built to turn visitors into students."
-                            github="https://github.com/EvandroKaibara/ek-classes"
+                            deploy="https://ek-classes.vercel.app"
                             techs={["React", "TypeScript", "Vite", "Motion"]}
                         />
                         <CardProject
@@ -156,6 +157,7 @@ export const ENG = () => {
                             h4="Magellan UC"
                             description="This project was developed with the goal of creating a landing page for the Magellan Group, highlighting one of its subsidiaries, Magellan UC, which specializes in underground excavation in Florida. The page was designed to present the services in a strategic and attractive way, focusing on usability, responsive design, and efficient communication with the target audience."
                             github="https://github.com/EvandroKaibara/MagellanGroup"
+                            deploy="https://magellan-group.vercel.app"
                             techs={["React", "Node"]}
                         />
                         <CardProject
@@ -164,12 +166,14 @@ export const ENG = () => {
                             description="This page was developed as part of an academic assessment, focusing on the practical application of the Bootstrap framework and the concepts of responsiveness. The project demonstrates the construction of a modern and adaptable interface, ensuring a good user experience on different devices, such as desktops, tablets, and smartphones."
                             techs={["HTML", "CSS", "JavaScript", "Bootstrap"]}
                             github="https://github.com/EvandroKaibara/SNKS"
+                            deploy="https://snks.vercel.app"
                         />
                         <CardProject
                             img='./img/projects/sabara.jpeg'
                             h4="Sabará"
                             description="The project aims to optimize communication between different departments at Sabará Hospital, with the goal of reducing operational errors and rework. The proposal seeks to make processes more efficient, promoting greater integration between teams and improving the quality of care."
                             github="https://github.com/EvandroKaibara/Sabara"
+                            deploy="https://sabara.vercel.app"
                             techs={["React", "Node"]}
                         />
                     </ProjectCarousel>

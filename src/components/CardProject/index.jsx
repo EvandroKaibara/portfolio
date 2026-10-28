@@ -1,6 +1,7 @@
+import { RiGlobalLine } from 'react-icons/ri'
 import styles from './card-project.module.css'
 
-export const CardProject = ({ img, h4, description, techs = [], github }) => {
+export const CardProject = ({ img, h4, description, techs = [], github, deploy }) => {
     return (
         <div className={styles.container}>
             {img && <img src={img} className={styles.img} />}
@@ -15,7 +16,12 @@ export const CardProject = ({ img, h4, description, techs = [], github }) => {
                     </span>
                 ))}
             </div>
-            {github && <a href={github} target="_blank"><img src="./img/Github.png" /></a>}
+            {(github || deploy) && (
+                <div className={styles.links}>
+                    {github && <a href={github} target="_blank" rel="noreferrer" aria-label="GitHub"><img src="./img/Github.png" /></a>}
+                    {deploy && <a href={deploy} target="_blank" rel="noreferrer" aria-label="Deploy"><RiGlobalLine /></a>}
+                </div>
+            )}
         </div>
     )
 }

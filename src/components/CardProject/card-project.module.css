@@ -73,8 +73,9 @@
     transform: translateY(-2px);
 }
 
-.container > a { align-self: flex-start; margin-top: auto; padding-top: 0.5rem; }
-.container > a img { width: 32px; }
+.links { display: flex; gap: 0.5rem; align-self: flex-start; margin-top: auto; padding-top: 0.5rem; }
+.links img { display: block; width: 32px; }
+.links svg { display: block; width: 32px; height: 32px; padding: 6px; box-sizing: border-box; border-radius: 50%; background: #43454D; color: var(--aqua); }
 
 @media (max-width: 480px) {
     .container {
