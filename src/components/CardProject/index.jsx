@@ -1,10 +1,23 @@
+import { useRef } from 'react'
 import { RiGlobalLine } from 'react-icons/ri'
 import styles from './card-project.module.css'
 
 export const CardProject = ({ img, h4, description, techs = [], github, deploy }) => {
+    const dialogRef = useRef(null)
+
     return (
         <div className={styles.container}>
-            {img && <img src={img} className={styles.img} />}
+            {img && (
+                <>
+                    <button type="button" className={styles.imgButton} onClick={() => dialogRef.current.showModal()} aria-label={`View ${h4} image full screen`}>
+                        <img src={img} alt={h4} className={styles.img} />
+                    </button>
+                    {/* Native dialog gives Esc to close, focus trapping and the top layer for free */}
+                    <dialog ref={dialogRef} className={styles.dialog} onClick={() => dialogRef.current.close()}>
+                        <img src={img} alt={h4} className={styles.dialogImg} />
+                    </dialog>
+                </>
+            )}
             <h4 className={styles.h4}>{h4}</h4>
             <hr />
             <p className={styles.p}>{description}</p>
