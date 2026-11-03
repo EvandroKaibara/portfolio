@@ -1,17 +1,42 @@
-# React + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My personal portfolio. It lists the projects I have built, my work experience and the awards I won at FIAP, and it comes in Portuguese, English and Spanish.
 
-Currently, two official plugins are available:
+## What's on the page
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- An about section and a timeline with my jobs as an English teacher and as a software engineer.
+- A project carousel with screenshots, short descriptions and a deploy link on each card. Current projects include the Snow&Cia booking system and lodging calculator, the EK Classes landing page, the Magellan UC landing page and a communication system for Sabará Hospital.
+- Awards: 1st place at FIAP's Global Solution 2026, Top Talents at the Talent Summit and 2nd place at NEXT 2026.
+- A link to my resume, plus GitHub, LinkedIn and email.
+- A light and dark theme, and scroll animations.
 
-## React Compiler
+## Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+React 19 with Vite, React Router for the three language routes, `next-themes` for the theme switch, AOS for scroll animations, `sonner` for toasts and `react-icons` for icons. Styles are CSS modules.
 
-## Expanding the ESLint configuration
+## Running it
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# portfolio
+```bash
+npm install
+npm run dev
+```
+
+Other scripts:
+
+```bash
+npm run build    # production build in dist/
+npm run preview  # serve the build locally
+npm run lint     # ESLint
+```
+
+## Structure
+
+```
+src/
+  components/   shared pieces: cards, carousel, header, footer, timeline
+  hooks/        useReveal
+  pages/        pt, eng and es, one page per language
+public/img/     photos, project screenshots and award pictures
+```
+
+Each language page is its own file, so a text change has to be made in all three.
