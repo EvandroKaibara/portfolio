@@ -107,18 +107,21 @@ export const ES = () => {
                 <ProjectCarousel labels={{ prev: "Anterior", next: "Siguiente", carousel: "Carrusel", grid: "Cuadrícula" }}>
                     <CardProject
                         img='./img/awards/Global-Solution-2026.jpeg'
+                        links={false}
                         h4="Global Solution 2026"
                         description="Conquistamos el 1º lugar en la Global Solution 2026 Space Connect, de FIAP. Nuestro grupo, ASTRO, desarrolló AstroSafra, una plataforma que verifica en tiempo real las condiciones de las tierras de cultivo a partir de datos satelitales y mapea las mejores rutas para el transporte de todo lo que se produce."
                         techs={["FIAP", "1º lugar"]}
                     />
                     <CardProject
                         img='./img/awards/Talent-Summit-2026-web.jpg'
+                        links={false}
                         h4="Talent Summit 2026"
                         description="Fui uno de los Top Talents de FIAP, los mejores alumnos de la facultad, elegidos para presentar sus proyectos directamente a representantes de grandes empresas."
                         techs={["FIAP", "Top Talent"]}
                     />
                     <CardProject
                         img='./img/awards/Next-2026.jpeg'
+                        links={false}
                         h4="NEXT 2026"
                         description="Fui TOP 2 entre más de 30 grupos que presentaron un CRM para el Hospital São Rafael. Nuestro grupo desarrolló CRM Centrum, un CRM modular con un LLM integrado que genera informes a partir de los datos del hospital."
                         techs={["FIAP", "2º lugar"]}
@@ -177,6 +180,12 @@ export const ES = () => {
                         github="https://github.com/EvandroKaibara/Sabara"
                         deploy="https://sabara.vercel.app"
                         techs={["React", "Node"]}
+                    />
+                    <CardProject
+                        img='./img/projects/classes-dashboard.png'
+                        h4="Classes Dashboard"
+                        description="Panel local para seguir mis clases particulares: lo cobrado, lo que falta por cobrar, clases por mes, alumnos y los temas más pedidos. Lee los datos en vivo de una hoja de Google y agenda clases en Google Calendar con enlace de Google Meet, escribiendo de vuelta en la hoja con Apps Script."
+                        techs={["React", "TypeScript", "Vite", "Recharts", "Apps Script"]}
                     />
                 </ProjectCarousel>
             </section>
