@@ -4,7 +4,47 @@
     margin: 0 auto;
 }
 
+.toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.filter {
+    height: 40px;
+    padding: 0 1rem;
+    font: inherit;
+    color: var(--white);
+    background-color: var(--grey);
+    border: 2px solid var(--aqua);
+    border-radius: 10px;
+    cursor: pointer;
+    transition:
+        color 200ms var(--ease-out),
+        background-color 200ms var(--ease-out),
+        transform 160ms var(--ease-out);
+}
+
+.filter:active {
+    transform: scale(0.96);
+}
+
+.filter:hover,
+.filter[aria-pressed="true"] {
+    color: #292F36;
+    background-color: var(--aqua);
+}
+
 .toggle {
+    margin-left: auto;
     display: flex;
     justify-content: flex-end;
     gap: 0.5rem;
