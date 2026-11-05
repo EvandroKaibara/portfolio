@@ -105,18 +105,21 @@ export const ENG = () => {
                     <ProjectCarousel labels={{ prev: "Previous", next: "Next", carousel: "Carousel", grid: "Grid" }}>
                         <CardProject
                             img='./img/awards/Global-Solution-2026.jpeg'
+                            links={false}
                             h4="Global Solution 2026"
                             description="We won 1st place at FIAP's Global Solution 2026 Space Connect. Our group, ASTRO, built AstroSafra, a platform that checks planting land conditions in real time using satellite data and maps the best routes to transport everything that is produced."
                             techs={["FIAP", "1st place"]}
                         />
                         <CardProject
                             img='./img/awards/Talent-Summit-2026-web.jpg'
+                            links={false}
                             h4="Talent Summit 2026"
                             description="I was one of FIAP's Top Talents, the best students at the university, chosen to present their projects directly to representatives of major companies."
                             techs={["FIAP", "Top Talent"]}
                         />
                         <CardProject
                             img='./img/awards/Next-2026.jpeg'
+                            links={false}
                             h4="NEXT 2026"
                             description="I placed in the TOP 2 among more than 30 groups that presented a CRM for Hospital São Rafael. Our group built CRM Centrum, a modular CRM with an integrated LLM that generates reports from the hospital's data."
                             techs={["FIAP", "2nd place"]}
@@ -175,6 +178,12 @@ export const ENG = () => {
                             github="https://github.com/EvandroKaibara/Sabara"
                             deploy="https://sabara.vercel.app"
                             techs={["React", "Node"]}
+                        />
+                        <CardProject
+                            img='./img/projects/classes-dashboard.png'
+                            h4="Classes Dashboard"
+                            description="Local dashboard to track my private lessons: revenue received, amount still due, lessons per month, students and the most requested topics. It reads live data from a Google Sheet and schedules lessons in Google Calendar with a Google Meet link, writing back to the sheet through Apps Script."
+                            techs={["React", "TypeScript", "Vite", "Recharts", "Apps Script"]}
                         />
                     </ProjectCarousel>
                 </section>
