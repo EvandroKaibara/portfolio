@@ -192,6 +192,14 @@ export const ENG = () => {
                             description="Local dashboard to track my private lessons: revenue received, amount still due, lessons per month, students and the most requested topics. It reads live data from a Google Sheet and schedules lessons in Google Calendar with a Google Meet link, writing back to the sheet through Apps Script."
                             techs={["React", "TypeScript", "Vite", "Recharts", "Apps Script"]}
                         />
+                        <CardProject
+                            img='./img/projects/bankapi.png'
+                            category="Back-End"
+                            h4="BankAPI"
+                            description="Banking REST API built in my college Java classes. It manages customers, accounts and transactions such as deposits and withdrawals, with separate controllers, services and repositories and H2 as the database. The project applies the core concepts of a REST API and also has HTML pages to use the system from the browser."
+                            github="https://github.com/EvandroKaibara/bankAPI"
+                            techs={["Java", "Spring Boot", "H2", "REST API"]}
+                        />
                     </ProjectCarousel>
                 </section>
             </main>

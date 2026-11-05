@@ -194,6 +194,14 @@ export const ES = () => {
                         description="Panel local para seguir mis clases particulares: lo cobrado, lo que falta por cobrar, clases por mes, alumnos y los temas más pedidos. Lee los datos en vivo de una hoja de Google y agenda clases en Google Calendar con enlace de Google Meet, escribiendo de vuelta en la hoja con Apps Script."
                         techs={["React", "TypeScript", "Vite", "Recharts", "Apps Script"]}
                     />
+                    <CardProject
+                        img='./img/projects/bankapi.png'
+                        category="Back-End"
+                        h4="BankAPI"
+                        description="API REST de un banco, desarrollada en mis clases de Java de la universidad. Gestiona clientes, cuentas y transacciones, como depósitos y retiros, con controllers, services y repositories separados y H2 como base de datos. El proyecto aplica los conceptos de una API REST y también tiene páginas HTML para usar el sistema desde el navegador."
+                        github="https://github.com/EvandroKaibara/bankAPI"
+                        techs={["Java", "Spring Boot", "H2", "REST API"]}
+                    />
                 </ProjectCarousel>
             </section>
 
