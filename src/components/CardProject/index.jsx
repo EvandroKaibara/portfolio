@@ -2,7 +2,12 @@ import { useRef } from 'react'
 import { RiGlobalLine } from 'react-icons/ri'
 import styles from './card-project.module.css'
 
-export const CardProject = ({ img, h4, description, techs = [], github, deploy }) => {
+// Without href the icon stays visible but dimmed and non-interactive
+const ProjectLink = ({ href, label, children }) => href
+    ? <a href={href} target="_blank" rel="noreferrer" aria-label={label}>{children}</a>
+    : <a role="link" aria-disabled="true" aria-label={label} className={styles.off}>{children}</a>
+
+export const CardProject = ({ img, h4, description, techs = [], github, deploy, links = true }) => {
     const dialogRef = useRef(null)
 
     return (
@@ -29,10 +34,10 @@ export const CardProject = ({ img, h4, description, techs = [], github, deploy }
                     </span>
                 ))}
             </div>
-            {(github || deploy) && (
+            {links && (
                 <div className={styles.links}>
-                    {github && <a href={github} target="_blank" rel="noreferrer" aria-label="GitHub"><img src="./img/Github.png" /></a>}
-                    {deploy && <a href={deploy} target="_blank" rel="noreferrer" aria-label="Deploy"><RiGlobalLine /></a>}
+                    <ProjectLink href={github} label="GitHub"><img src="./img/Github.png" alt="" /></ProjectLink>
+                    <ProjectLink href={deploy} label="Deploy"><RiGlobalLine /></ProjectLink>
                 </div>
             )}
         </div>
