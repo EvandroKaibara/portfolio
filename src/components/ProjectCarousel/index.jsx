@@ -11,6 +11,7 @@ export const ProjectCarousel = ({ children, labels = {} }) => {
     const [target, setTarget] = useState(null)
     const track = useRef(null)
     const timer = useRef(null)
+    const thumb = useRef(null)
     const [filter, setFilter] = useState(null)
     const allItems = Children.toArray(children)
     // Only categories that have at least one project get a button
@@ -21,6 +22,21 @@ export const ProjectCarousel = ({ children, labels = {} }) => {
 
     const loops = items.length > 3
     const setWidth = () => track.current.children[items.length].offsetLeft - track.current.children[0].offsetLeft
+
+    // Mobile scroll indicator: one full cycle (a set of cards, or the whole track without a loop) maps to the bar
+    const sync = () => {
+        const el = track.current
+        if (!el || !thumb.current) return
+        const period = loops ? setWidth() : el.scrollWidth
+        thumb.current.style.width = `${Math.min(100, (el.clientWidth / period) * 100)}%`
+        thumb.current.style.left = `${((el.scrollLeft % period) / period) * 100}%`
+    }
+
+    useEffect(() => {
+        sync()
+        window.addEventListener('resize', sync)
+        return () => window.removeEventListener('resize', sync)
+    })
 
     const pick = (category) => {
         track.current?.scrollTo({ left: 0, behavior: 'instant' })
@@ -77,14 +93,17 @@ export const ProjectCarousel = ({ children, labels = {} }) => {
             {view === 'grid' ? (
                 <div className={`${styles.grid} ${motion}`} onAnimationEnd={swap}>{items}</div>
             ) : (
+                <>
                 <div className={`${styles.carousel} ${motion}`} onAnimationEnd={swap}>
                     <button className={styles.arrow} onClick={() => move(-1)} aria-label={prev}><RiArrowLeftSLine /></button>
-                    <div ref={track} className={styles.track} onScroll={loop}>
+                    <div ref={track} className={styles.track} onScroll={() => { sync(); loop() }}>
                         {items.map((item) => <div key={item.key} className={styles.item}>{item}</div>)}
                         {loops && items.map((item) => <div key={`${item.key}-copy`} className={styles.item} aria-hidden="true" inert>{item}</div>)}
                     </div>
                     <button className={styles.arrow} onClick={() => move(1)} aria-label={next}><RiArrowRightSLine /></button>
                 </div>
+                <div className={styles.progress} aria-hidden="true"><div ref={thumb} className={styles.thumb} /></div>
+                </>
             )}
         </div>
     )
