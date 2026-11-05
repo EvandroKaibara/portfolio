@@ -132,9 +132,10 @@ export const ENG = () => {
                         h2="Projects"
                     />
 
-                    <ProjectCarousel labels={{ prev: "Previous", next: "Next", carousel: "Carousel", grid: "Grid" }}>
+                    <ProjectCarousel labels={{ prev: "Previous", next: "Next", carousel: "Carousel", grid: "Grid", all: "All" }}>
                         <CardProject
                             img='./img/projects/snowecia.png'
+                            category="Full-Stack"
                             h4="Snow&Cia"
                             description="Snow&Cia system was developed to manage pet care services and bookings. The platform allows customers to register their preferences, request services, and enter data, while administrators track bookings, payments, schedules, and registered services. The project prioritizes a modern, responsive, and intuitive interface for use on computers, tablets, and smartphones."
                             github="https://github.com/EvandroKaibara/snowcia"
@@ -142,6 +143,7 @@ export const ENG = () => {
                         />
                         <CardProject
                             img='./img/projects/snowcia-calculator.png'
+                            category="Front-End"
                             h4="Snow&Cia Calculator"
                             description="Lodging calculator for the Snow&Cia pet hotel. It counts the daily rates from check-in and check-out, applies each day's price (holidays, December and January, long-stay promotion), calculates the deposit and the balance, and generates a text quote to send over WhatsApp. A second tab covers the Catsitter service, and everything runs in the browser, with no backend."
                             github="https://github.com/EvandroKaibara/snowcia-calculator"
@@ -150,6 +152,7 @@ export const ENG = () => {
                         />
                         <CardProject
                             img='./img/projects/ek-classes.jpeg'
+                            category="Front-End"
                             h4="EK Classes"
                             description="Landing page for my private English conversation classes (EK Classes). It presents the teaching method, the teacher and the class format, with a poster video, smooth animations and a responsive layout built to turn visitors into students."
                             deploy="https://ek-classes.vercel.app"
@@ -157,6 +160,7 @@ export const ENG = () => {
                         />
                         <CardProject
                             img='./img/projects/magellan.jpeg'
+                            category="Front-End"
                             h4="Magellan UC"
                             description="This project was developed with the goal of creating a landing page for the Magellan Group, highlighting one of its subsidiaries, Magellan UC, which specializes in underground excavation in Florida. The page was designed to present the services in a strategic and attractive way, focusing on usability, responsive design, and efficient communication with the target audience."
                             github="https://github.com/EvandroKaibara/MagellanGroup"
@@ -165,6 +169,7 @@ export const ENG = () => {
                         />
                         <CardProject
                             img='./img/projects/snks.jpeg'
+                            category="Front-End"
                             h4="SNKS"
                             description="This page was developed as part of an academic assessment, focusing on the practical application of the Bootstrap framework and the concepts of responsiveness. The project demonstrates the construction of a modern and adaptable interface, ensuring a good user experience on different devices, such as desktops, tablets, and smartphones."
                             techs={["HTML", "CSS", "JavaScript", "Bootstrap"]}
@@ -173,6 +178,7 @@ export const ENG = () => {
                         />
                         <CardProject
                             img='./img/projects/sabara.jpeg'
+                            category="Full-Stack"
                             h4="Sabará"
                             description="The project aims to optimize communication between different departments at Sabará Hospital, with the goal of reducing operational errors and rework. The proposal seeks to make processes more efficient, promoting greater integration between teams and improving the quality of care."
                             github="https://github.com/EvandroKaibara/Sabara"
@@ -181,6 +187,7 @@ export const ENG = () => {
                         />
                         <CardProject
                             img='./img/projects/classes-dashboard.png'
+                            category="Full-Stack"
                             h4="Classes Dashboard"
                             description="Local dashboard to track my private lessons: revenue received, amount still due, lessons per month, students and the most requested topics. It reads live data from a Google Sheet and schedules lessons in Google Calendar with a Google Meet link, writing back to the sheet through Apps Script."
                             techs={["React", "TypeScript", "Vite", "Recharts", "Apps Script"]}
