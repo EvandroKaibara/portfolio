@@ -30,7 +30,7 @@ export const Header = ({ about, awards, projects }) => {
             </div>
 
             <div
-                className={styles.menuButton}
+                className={`${styles.menuButton} ${open ? styles.open : ''}`}
                 onClick={() => setOpen(!open)}
             >
                 <span></span>
