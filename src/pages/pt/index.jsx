@@ -192,6 +192,14 @@ export const PT = () => {
                             description="Painel local para acompanhar as aulas particulares: quanto entrou, quanto falta receber, aulas por mês, alunos e os temas mais pedidos. Lê os dados ao vivo de uma planilha do Google e agenda reuniões no Google Calendar com link do Meet, direto do painel."
                             techs={["React", "TypeScript", "Vite", "Recharts", "Apps Script"]}
                         />
+                        <CardProject
+                            img='./img/projects/bankapi.png'
+                            category="Back-End"
+                            h4="BankAPI"
+                            description="API REST de um banco, desenvolvida nas aulas de Java da faculdade. Gerencia clientes, contas e transações, como depósitos e saques, com controllers, services e repositories separados e o H2 como banco de dados. O projeto aplica os conceitos de uma API REST e também tem páginas HTML para usar o sistema pelo navegador."
+                            github="https://github.com/EvandroKaibara/bankAPI"
+                            techs={["Java", "Spring Boot", "H2", "REST API"]}
+                        />
                     </ProjectCarousel>
 
                 </section>
