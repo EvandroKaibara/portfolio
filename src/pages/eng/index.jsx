@@ -200,6 +200,14 @@ export const ENG = () => {
                             github="https://github.com/EvandroKaibara/bankAPI"
                             techs={["Java", "Spring Boot", "H2", "REST API"]}
                         />
+                        <CardProject
+                            img='./img/projects/closetapi.png'
+                            category="Back-End"
+                            h4="ClosetAPI"
+                            description="REST API to manage the clothes in my wardrobe. It has endpoints to create, list, update and remove hoodies, jackets, pants, t-shirts, sneakers and accessories, and to combine pieces into outfits. Built with Java and Spring Boot on top of PostgreSQL, and documented with Swagger."
+                            github="https://github.com/EvandroKaibara/closetAPI"
+                            techs={["Java", "Spring Boot", "PostgreSQL", "REST API", "Swagger"]}
+                        />
                     </ProjectCarousel>
                 </section>
             </main>
