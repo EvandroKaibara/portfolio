@@ -208,6 +208,22 @@ export const ENG = () => {
                             github="https://github.com/EvandroKaibara/closetAPI"
                             techs={["Java", "Spring Boot", "PostgreSQL", "REST API", "Swagger"]}
                         />
+                        <CardProject
+                            img='./img/projects/juntos-pelo-snow.png'
+                            category="Front-End"
+                            h4="Juntos pelo Snow"
+                            description="Fundraising campaign website for the cancer treatment of my family's dog. It tells his story, shows the treatment costs with full transparency (amounts paid, donations received and pending exams) and explains how to donate through Pix. Built with React and Vite, in Portuguese. The repository is private."
+                            deploy="https://juntos-pelo-snow.vercel.app/"
+                            techs={["React", "Vite", "CSS", "Vercel"]}
+                        />
+                        <CardProject
+                            img='./img/projects/knockback.png'
+                            category="Front-End"
+                            h4="Knockback"
+                            description="Institutional website for a web design and development studio. It presents the services, the process from brief to launch, a work showcase and a contact section, with a loading screen and animated lightning in the hero. Built with React and Vite. The repository is private."
+                            deploy="https://knockback-company.vercel.app/"
+                            techs={["React", "Vite", "CSS", "Vercel"]}
+                        />
                     </ProjectCarousel>
                 </section>
             </main>
